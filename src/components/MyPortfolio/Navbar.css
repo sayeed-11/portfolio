@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Sevillana&display=swap');
+
+.nav-container {
+    /* position: fixed; */
+    width: 100%;
+    background-color: #222324;
+    left: 0;
+    top: 0;
+
+    .nabvar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        .logo {
+            h1 {
+                text-transform: capitalize;
+                font-family: 'Sevillana', cursive;
+                color: #00aeff;
+            }
+        }
+
+        .icon {
+            display: none;
+            font-size: 1.4rem;
+        }
+
+        .nav-content {
+            padding: 1rem;
+
+            ul {
+                display: flex;
+                gap: 1.5rem;
+
+                .link {
+                    color: #FFF;
+                    font-size: .7rem;
+                    text-transform: uppercase;
+                    letter-spacing: .1rem;
+                }
+
+                .link:hover {
+                    color: #00aeff;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (width<640px) {
+    .nav-container {
+        .nabvar {
+            .nav-content {
+                position: absolute;
+                width: 100%;
+                background-color: #000;
+                top: 43.33px;
+                left: -50%;
+                z-index: 99;
+                min-height: calc(100vh - 43.33px);
+                transition: 0.3s;
+                /* background-color: gray; */
+                
+
+                ul {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    gap: 2rem;
+                    padding-top:2rem ;
+
+                    .link {
+                        color: #FFF;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                        letter-spacing: .1rem;
+                    }
+                    .link:hover{
+                        color: #FFF;
+                    }
+                    .link:active{
+                        color: #00aeff;
+                    }
+                }
+            }
+
+            .icon {
+                display: block;
+            }
+        }
+    }
+}
